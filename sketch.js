@@ -172,7 +172,7 @@ function draw() {
     if (keyDown("a")){
       Btank.x=Btank.x-5;
     }
-    if (Btank.isTouching(RUM1)){
+    if (Btank.isTouching(BUM1)){
       Btank.addImage(BTank2IMG);
       RUM1.destroy();
     }
@@ -191,8 +191,8 @@ function draw() {
    
     Rtank.collide(edges);
     Btank.collide(edges);
-    bullet1.bounce(edges);
-    bullet2.bounce(edges);
+    bullet1.bounceOff(edges);
+    bullet2.bounceOff(edges);
 
   if (wallGroup.isTouching(Rtank)){
     Rtank.bounceOff(wallGroup);
