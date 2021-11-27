@@ -189,8 +189,10 @@ function draw() {
       RUM2.destroy();
     }
    
-   Rtank.collide(edges);
+    Rtank.collide(edges);
     Btank.collide(edges);
+    bullet1.bounce(edges);
+    bullet2.bounce(edges);
 
   if (wallGroup.isTouching(Rtank)){
     Rtank.bounceOff(wallGroup);
